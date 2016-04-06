@@ -25,9 +25,6 @@ public class PageController {
     @Value("${app.version}")
     private String appVersion;
 
-    @Autowired
-    private ArticleDao articleDao;
-
     @RequestMapping(value = "/", method= RequestMethod.GET)
     public String redirect() {
         return "redirect:/home";
@@ -38,10 +35,6 @@ public class PageController {
         ModelAndView model = new ModelAndView();
         model.addObject("appVersion", appVersion);
         model.setViewName("home");
-        Article article = new Article();
-        article.setTitle("asdf");
-        article.setContent("<div></div>");
-        articleDao.save(article);
         return model;
     }
 

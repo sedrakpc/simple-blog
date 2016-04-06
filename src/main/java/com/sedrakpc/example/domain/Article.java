@@ -13,6 +13,7 @@ public class Article implements Serializable {
     private Long id;
     private String title;
     private String content;
+    private String postedBy;
     private Date creationDate;
 
     public Long getId() {
@@ -37,6 +38,14 @@ public class Article implements Serializable {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public String getPostedBy() {
+        return postedBy;
+    }
+
+    public void setPostedBy(String postedBy) {
+        this.postedBy = postedBy;
     }
 
     public Date getCreationDate() {

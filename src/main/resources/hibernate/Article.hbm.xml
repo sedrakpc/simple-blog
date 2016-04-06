@@ -13,6 +13,9 @@
         <property name="content" type="string">
             <column name="content"/>
         </property>
+        <property name="postedBy" type="string">
+            <column name="posted_by" length="200" not-null="true"/>
+        </property>
         <property name="creationDate" type="date">
             <column name="creation_date"/>
         </property>
