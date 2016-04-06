@@ -18,6 +18,7 @@
         <property name="mappingResources">
             <list>
                 <value>/hibernate/Article.hbm.xml</value>
+                <value>/hibernate/DataStore.hbm.xml</value>
             </list>
         </property>
 

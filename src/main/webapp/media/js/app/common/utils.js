@@ -19,6 +19,9 @@ angular.module('blog.utils', [])
         },
         hideAjaxLoader: function () {
             $rootScope.showAjaxLoader = false;
+        },
+        getImageUrl: function (id) {
+            return $sce.trustAsResourceUrl($rootScope.server.contextPath + "getFile?id=" + id);
         }
     };
     return utils;

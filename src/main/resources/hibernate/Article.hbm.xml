@@ -10,6 +10,9 @@
         <property name="title" type="string">
             <column name="title" length="200" not-null="true"/>
         </property>
+        <property name="subtitle" type="string">
+            <column name="subtitle" length="200"/>
+        </property>
         <property name="content" type="string">
             <column name="content"/>
         </property>

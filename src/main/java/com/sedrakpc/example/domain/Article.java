@@ -12,6 +12,7 @@ public class Article implements Serializable {
 
     private Long id;
     private String title;
+    private String subtitle;
     private String content;
     private String postedBy;
     private Date creationDate;
@@ -30,6 +31,14 @@ public class Article implements Serializable {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getSubtitle() {
+        return subtitle;
+    }
+
+    public void setSubtitle(String subtitle) {
+        this.subtitle = subtitle;
     }
 
     public String getContent() {

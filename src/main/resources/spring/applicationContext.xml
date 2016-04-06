@@ -45,4 +45,6 @@
 
     <import resource="../database/Hibernate.xml"/>
 
+    <bean id="fileStorageService" class="com.sedrakpc.example.common.FileStorageService"/>
+
 </beans>

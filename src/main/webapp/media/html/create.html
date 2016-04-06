@@ -1,18 +1,32 @@
 <div class="container">
     <div class="row">
-        <div class="ibox float-e-margins">
-            <div class="ibox-title">
-                <h5>Wyswig Summernote Editor</h5>
-
-                <div ibox-tools></div>
+        <form name="postForm">
+            <div class="form-group" ng-class="{'has-error': postForm.title.$invalid && postForm.title.$dirty}">
+                <label for="title" class="control-label">Title *</label>
+                <div class="">
+                    <input type="text" ng-model="post.title" required class="form-control" id="title" name="title" placeholder="Title">
+                </div>
             </div>
-            <div class="ibox-content no-padding">
-
-                <div summernote class="summernote" height="300" ng-model="post.content">
+            <div class="form-group">
+                <label for="title" class="control-label">Subtitle</label>
+                <div class="">
+                    <input type="text" ng-model="post.subtitle" class="form-control" id="subtitle" name="subtitle" placeholder="Subtitle">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Post content *</label>
+                <div summernote class="summernote" focus height="400" on-image-upload="imageUpload(files)" ng-model="post.content" editor="editor">
 
                 </div>
-
             </div>
-        </div>
+            <div class="form-group" ng-class="{'has-error': postForm.postedBy.$invalid && postForm.postedBy.$dirty}">
+                <label for="title" class="control-label">Author *</label>
+                <div class="">
+                    <input type="text" ng-model="post.postedBy" required class="form-control"
+                           id="postedBy" name="postedBy" placeholder="Author">
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary" ng-disabled="postForm.$invalid" ng-click="save()">Publish</button>
+        </form>
     </div>
 </div>
